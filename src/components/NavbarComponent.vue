@@ -61,7 +61,7 @@ onMounted(() => {
               </a>
             </li>
             <!-- почта -->
-            <li><a href="malto:demidbeton@mail.ru" class="hover:underline" /></li>
+            <li><a href="malto:demidbeton@mail.ru" class="hover:underline" />taubetonkz@mail.ru</li>
           </ul>
         </div>
         <!-- Десктоп-навигация -->
