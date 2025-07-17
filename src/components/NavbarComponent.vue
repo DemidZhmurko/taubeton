@@ -60,7 +60,8 @@ onMounted(() => {
                 +7 (707) 485-23-28
               </a>
             </li>
-            <li><a href="malto:demidbeton@mail.ru" class="hover:underline">demidbeton@mail.ru</a></li>
+            <!-- почта -->
+            <li><a href="malto:demidbeton@mail.ru" class="hover:underline" /></li>
           </ul>
         </div>
         <!-- Десктоп-навигация -->
