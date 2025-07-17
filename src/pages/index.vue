@@ -12,8 +12,8 @@ defineOptions({
   >
     <div class="bg-black/60 inset-0 absolute z-0" aria-hidden="true" />
     <div class="mx-auto px-4 relative z-10 container">
-      <div class="text-white py-12 flex flex-col min-h-[70vh] items-start justify-center md:items-start">
-        <div class="text-center w-full space-y-6">
+      <div class="md:items-left text-white py-12 flex flex-col min-h-[70vh] items-start justify-center md:text-left md:w1/2">
+        <div class="text-center w-full space-y-6 md:text-left">
           <h1 class="text-2xl leading-tight font-bold md:text-6xl sm:text-5xl">
             Купить бетон с доставкой в Алматы по самым выгодным ценам
           </h1>
