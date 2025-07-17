@@ -91,6 +91,7 @@ onMounted(() => {
           <span class="text-sm">+7 (707) 485-23-28</span>
         </a>
         <!-- Бургер -->
+        <!-- // Кнопка открытия модалки -->
         <div
           class="text-3xl text-gray-700 flex h-8 w-8 cursor-pointer transition-all duration-300 items-center justify-center"
           @click="toggleMobileMenu"
