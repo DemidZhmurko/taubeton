@@ -50,26 +50,39 @@ onMounted(() => {
         </div>
       </a>
 
-      <!-- Десктоп-навигация -->
-      <nav class="hidden space-x-8 md:flex">
-        <a
-          v-for="item in navItems"
-          :key="item.href"
-          :href="item.href"
-          class="text-gray-700 transition hover:text-blue-600"
-        >
-          {{ item.name }}
-        </a>
-      </nav>
+      <div class="w-[70%] block">
+        <div class="border-concrete pb-2 border-b-2 border-gray-300 hidden md:block">
+          <ul class="text-sm text-gray-700 flex justify-between space-x-4">
+            <li>РК, г. Алматы, Улица Казыбаева, 262</li>
+            <li class="flex items-center">
+              <div class="i-mdi-phone text-xl text-green-500 mr-2" />
+              <a href="tel:+77074852328" class="transition hover:underline">
+                +7 (707) 485-23-28
+              </a>
+            </li>
+            <li><a href="malto:demidbeton@mail.ru" class="hover:underline">demidbeton@mail.ru</a></li>
+          </ul>
+        </div>
+        <!-- Десктоп-навигация -->
+        <nav class="ml-auto pt-2 w-[70%] hidden space-x-8 md:flex md:justify-between">
+          <a
+            v-for="item in navItems"
+            :key="item.href"
+            :href="item.href"
+            class="text-gray-700 transition hover:text-blue-600"
+          >
+            {{ item.name }}
+          </a>
+        </nav>
+      </div>
 
       <!-- Десктоп-кнопка -->
-      <div class="hidden md:block">
-        <RequestModal />
+      <!-- <div class="hidden md:block">
         <a href="tel:+77074852328" class="text-gray-700 mt-2 flex items-center">
           <div class="i-mdi-phone text-xl text-green-500 mr-2" />
           <span class="text-sm">+7 (707) 485-23-28 </span>
         </a>
-      </div>
+      </div> -->
 
       <!-- Мобильный блок -->
       <div class="flex items-center space-x-4 md:hidden">
@@ -78,6 +91,7 @@ onMounted(() => {
           <span class="text-sm">+7 (707) 485-23-28</span>
         </a>
         <!-- Бургер -->
+        <!-- // Кнопка открытия модалки -->
         <div
           class="text-3xl text-gray-700 flex h-8 w-8 cursor-pointer transition-all duration-300 items-center justify-center"
           @click="toggleMobileMenu"
