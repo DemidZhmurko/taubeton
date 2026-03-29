@@ -1,7 +1,7 @@
 {
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@10.11.1",
   "scripts": {
     "build": "vite-ssg build",
     "dev": "vite --port 3333 --open",
@@ -15,6 +15,7 @@
   "dependencies": {
     "@unhead/vue": "catalog:frontend",
     "@vueuse/core": "catalog:frontend",
+    "@vueuse/head": "catalog:frontend",
     "@vueuse/schema-org": "catalog:frontend",
     "inputmask": "catalog:frontend",
     "vite-ssg": "catalog:frontend",
@@ -24,10 +25,12 @@
   "devDependencies": {
     "@antfu/eslint-config": "catalog:dev",
     "@iconify-json/carbon": "catalog:build",
-    "@iconify-json/mdi": "catalog:frontend",
+    "@iconify-json/mdi": "catalog:build",
+    "@iconify-json/tabler": "catalog:frontend",
     "@types/node": "catalog:dev",
     "@unhead/schema-org": "catalog:frontend",
     "@unocss/eslint-plugin": "catalog:dev",
+    "@unocss/preset-icons": "catalog:build",
     "@vitejs/plugin-vue": "catalog:build",
     "@vue-macros/volar": "catalog:dev",
     "@vue/test-utils": "catalog:dev",
@@ -35,6 +38,7 @@
     "eslint-plugin-format": "catalog:dev",
     "jsdom": "catalog:build",
     "lint-staged": "catalog:dev",
+    "pnpm": "catalog:dev",
     "simple-git-hooks": "catalog:dev",
     "taze": "catalog:dev",
     "typescript": "catalog:dev",
@@ -45,6 +49,7 @@
     "unplugin-vue-router": "catalog:build",
     "vite": "catalog:build",
     "vite-plugin-vue-devtools": "catalog:dev",
+    "vite-ssg-sitemap": "catalog:build",
     "vitest": "catalog:dev",
     "vue-tsc": "catalog:dev"
   },
