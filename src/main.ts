@@ -16,12 +16,12 @@ export const createApp = ViteSSG(
     head.use(
       SchemaOrgUnheadPlugin(
         {
-          host: 'https://kusa-beton.kz',
-          canonicalHost: 'https://kusa-beton.kz',
+          host: 'https://taubeton.kz',
+          canonicalHost: 'https://taubeton.kz',
         },
         () => ({
           // Можно задать мета-данные по умолчанию
-          title: 'Kusa Beton',
+          title: 'Taubeton - Бетон в Алматы',
           description: 'Продажа и доставка бетона по Алматы',
         }),
       ),
