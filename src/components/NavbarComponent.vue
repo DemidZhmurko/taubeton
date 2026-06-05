@@ -46,7 +46,7 @@ onMounted(() => {
       <!-- Логотип -->
       <a href="/" class="flex items-center">
         <div class="p-2 rounded bg-blue-500 overflow-hidden">
-          <img src="/logo.png" alt="Logo" class="h-20 w-auto scale-140 transform object-cover">
+          <img src="/logo.png" alt="Logo" class="h-20 w-35 scale-140 transform object-cover">
         </div>
       </a>
 
@@ -55,7 +55,7 @@ onMounted(() => {
           <ul class="text-sm text-gray-700 flex justify-between space-x-4">
             <li>РК, г. Алматы, Улица Казыбаева, 262</li>
             <li class="flex items-center">
-              <div class="i-mdi-phone text-xl text-green-500 mr-2" />
+              <div class="i-mdi-phone text-xs text-green-500 mr-2" />
               <a href="tel:+77074852328" class="transition hover:underline">
                 +7 (707) 485-23-28
               </a>
@@ -80,19 +80,22 @@ onMounted(() => {
       <!-- Десктоп-кнопка -->
       <!-- <div class="hidden md:block">
         <a href="tel:+77074852328" class="text-gray-700 mt-2 flex items-center">
-          <div class="i-mdi-phone text-xl text-green-500 mr-2" />
+          <div class="i-mdi-phone text-xs text-green-500 mr-2" />
           <span class="text-sm">+7 (707) 485-23-28 </span>
         </a>
       </div> -->
 
       <!-- Мобильный блок -->
       <div class="flex items-center space-x-4 md:hidden">
-        <a href="tel:+77074852328" class="text-gray-700 flex items-center">
-          <div class="i-mdi-whatsapp text-xl text-green-500 mr-2" />
-          <span class="text-sm">+7 (707) 485-23-28</span>
+        <a
+          href=" "
+          class="text-gray-700 font-semibold flex transition items-center hover:text-blue-600"
+        >
+          <div class="i-mdi-phone text-lg text-green-500 mr-1" />
+          <span class="text-sm">Позвонить</span>
         </a>
+
         <!-- Бургер -->
-        <!-- // Кнопка открытия модалки -->
         <div
           class="text-3xl text-gray-700 flex h-8 w-8 cursor-pointer transition-all duration-300 items-center justify-center"
           @click="toggleMobileMenu"
