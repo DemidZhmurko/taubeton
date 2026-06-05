@@ -88,7 +88,7 @@ onMounted(() => {
       <!-- Мобильный блок -->
       <div class="flex items-center space-x-4 md:hidden">
         <a
-          href=" "
+          href="tel:+7(707)485-23-28"
           class="text-gray-700 font-semibold flex transition items-center hover:text-blue-600"
         >
           <div class="i-mdi-phone text-lg text-green-500 mr-1" />
