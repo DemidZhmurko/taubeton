@@ -12,11 +12,11 @@
             </span>
 
             <h2 class="text-3xl leading-tight font-bold mt-6 md:text-5xl">
-              Свяжитесь с TAUBETON
+              Свяжитесь с нами для заказа бетона с доставкой по Алматы
             </h2>
 
             <p class="text-base text-gray-200 leading-relaxed mt-5 max-w-xl md:text-lg">
-              Закажите бетон с доставкой по Алматы — рассчитаем объём, подберём марку и согласуем удобное время подачи миксера.
+              Закажите бетон с доставкой по Алматы — подберём марку и согласуем удобное время подачи миксера.
             </p>
 
             <div class="mt-8 py-7 border-y border-white/10 space-y-4">
