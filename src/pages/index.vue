@@ -1,49 +1,65 @@
 <script setup lang="ts">
 import { useHead, useSeoMeta } from '@unhead/vue'
 import { defineLocalBusiness, defineWebPage, defineWebSite, useSchemaOrg } from '@vueuse/schema-org'
+import { ref } from 'vue'
 
 defineOptions({
   name: 'IndexPage',
 })
 
+const faqItems = [
+  {
+    question: 'Сколько стоит бетон с доставкой в Алматы?',
+    answer: 'Цена бетона зависит от марки, объёма заказа и района доставки. Чтобы узнать точную стоимость бетона за куб с доставкой по Алматы, оставьте заявку или свяжитесь с нами по телефону.',
+  },
+  {
+    question: 'Какую марку бетона выбрать для фундамента?',
+    answer: 'Для фундамента частного дома чаще всего используют бетон М250 или М300. Точная марка зависит от проекта, нагрузки, типа грунта и назначения конструкции.',
+  },
+  {
+    question: 'Чем отличается бетон М200 от М300?',
+    answer: 'Бетон М300 прочнее и лучше подходит для фундаментов, плит, монолитных работ и конструкций с повышенной нагрузкой. М200 чаще используют для стяжек, дорожек и менее нагруженных элементов.',
+  },
+  {
+    question: 'Можно ли заказать бетон небольшим объёмом?',
+    answer: 'Да, можно заказать бетон как для небольших частных работ, так и для крупных строительных объектов. Минимальный объём лучше уточнить у менеджера.',
+  },
+  {
+    question: 'Как быстро осуществляется доставка бетона?',
+    answer: 'Доставка бетона по Алматы обычно выполняется в день заказа или на следующий день, в зависимости от загруженности и доступности миксеров.',
+  },
+  {
+    question: 'Как рассчитать нужный объём бетона?',
+    answer: 'Чтобы рассчитать объём бетона, нужно умножить длину, ширину и высоту конструкции. Если вы не уверены в расчётах, мы поможем рассчитать нужное количество бесплатно.',
+  },
+  {
+    question: 'Есть ли документы и сертификаты на бетон?',
+    answer: 'Да, товарный бетон поставляется с необходимыми документами, подтверждающими качество продукции.',
+  },
+  {
+    question: 'Можно ли заказать бетон с доставкой на объект?',
+    answer: 'Да, вы можете заказать бетон с доставкой прямо на строительный объект в Алматы и ближайшие районы.',
+  },
+]
+
+const activeFaqIndex = ref(0)
+
+function toggleFaq(index: number) {
+  activeFaqIndex.value = activeFaqIndex.value === index ? -1 : index
+}
+
 // ✅ FAQ Schema (JSON-LD)
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  'mainEntity': [
-    {
-      '@type': 'Question',
-      'name': 'Какая марка бетона подходит для фундамента?',
-      'acceptedAnswer': {
-        '@type': 'Answer',
-        'text': 'Для фундамента частного дома чаще всего используют бетон М300 или М350, так как они обеспечивают прочность и долговечность конструкции.',
-      },
+  'mainEntity': faqItems.map(item => ({
+    '@type': 'Question',
+    'name': item.question,
+    'acceptedAnswer': {
+      '@type': 'Answer',
+      'text': item.answer,
     },
-    {
-      '@type': 'Question',
-      'name': 'Сколько стоит бетон в Алматы?',
-      'acceptedAnswer': {
-        '@type': 'Answer',
-        'text': 'Цена бетона зависит от марки и объема. Уточните стоимость у наших специалистов — мы предложим выгодные условия с доставкой.',
-      },
-    },
-    {
-      '@type': 'Question',
-      'name': 'Доставляете ли вы бетон по Алматы?',
-      'acceptedAnswer': {
-        '@type': 'Answer',
-        'text': 'Да, компания TAUBETON осуществляет доставку бетона по Алматы и области собственным транспортом точно в срок.',
-      },
-    },
-    {
-      '@type': 'Question',
-      'name': 'Соответствует ли бетон ГОСТ?',
-      'acceptedAnswer': {
-        '@type': 'Answer',
-        'text': 'Да, весь бетон производится по ГОСТ и сопровождается паспортом качества.',
-      },
-    },
-  ],
+  })),
 }
 
 // ✅ Head (GA + FAQ)
@@ -161,72 +177,77 @@ useSchemaOrg([
     <AboutUs />
   </section>
   <!-- FAQ -->
-  <section class="py-12 bg-gray-50">
-    <div class="mx-auto px-4 max-w-4xl container">
-      <h2 class="text-2xl font-bold mb-8 md:text-3xl">
-        Часто задаваемые вопросы о бетоне
-      </h2>
+  <section class="py-16 bg-gray-50 scroll-mt-16">
+    <div class="mx-auto px-4 max-w-5xl container">
+      <div class="mb-10 text-center">
+        <span class="text-sm text-blue-600 tracking-wide font-semibold uppercase">FAQ</span>
+        <h2 class="text-2xl text-gray-900 font-bold mt-3 md:text-4xl">
+          Часто задаваемые вопросы о бетоне и доставке в Алматы
+        </h2>
+        <p class="text-gray-600 leading-relaxed mx-auto mt-4 max-w-2xl">
+          Собрали ответы про бетон Алматы, доставку, цену бетона за куб и подбор марки под фундамент или монолитные работы.
+        </p>
+      </div>
 
-      <div class="border rounded-xl bg-white shadow-sm divide-y">
-        <!-- Item -->
-        <details class="group p-5 cursor-pointer">
-          <summary class="text-lg font-semibold list-none flex items-center justify-between">
-            Какая марка бетона подходит для фундамента?
-
-            <span class="transition-transform duration-300 group-open:rotate-180">
-              ▼
+      <div class="gap-4 grid">
+        <article
+          v-for="(item, index) in faqItems"
+          :key="item.question"
+          class="border border-gray-200 rounded-xl bg-white shadow-sm transition-all duration-300 overflow-hidden hover:border-blue-200 hover:shadow-md"
+        >
+          <button
+            class="p-5 text-left flex gap-4 w-full items-start justify-between sm:p-6"
+            :aria-expanded="activeFaqIndex === index"
+            :aria-controls="`faq-answer-${index}`"
+            @click="toggleFaq(index)"
+          >
+            <span class="text-base text-gray-900 leading-snug font-semibold sm:text-lg">
+              {{ item.question }}
             </span>
-          </summary>
-
-          <p class="text-gray-600 leading-relaxed mt-3">
-            Для фундамента частного дома чаще всего используют бетон М300 или М350. Эти марки обеспечивают высокую прочность и устойчивость к нагрузкам.
-          </p>
-        </details>
-
-        <!-- Item -->
-        <details class="group p-5 cursor-pointer">
-          <summary class="text-lg font-semibold list-none flex items-center justify-between">
-            Сколько стоит бетон в Алматы?
-
-            <span class="transition-transform duration-300 group-open:rotate-180">
-              ▼
+            <span
+              class="border rounded-full flex h-8 min-w-8 transition-all duration-300 items-center justify-center"
+              :class="activeFaqIndex === index ? 'rotate-45 border-blue-600 bg-blue-600 text-white' : 'border-gray-200 bg-gray-50 text-blue-600'"
+              aria-hidden="true"
+            >
+              <span class="text-xl leading-none">+</span>
             </span>
-          </summary>
+          </button>
 
-          <p class="text-gray-600 leading-relaxed mt-3">
-            Цена зависит от марки и объема. В среднем стоимость начинается от 15 000 ₸ за м³ с доставкой. Для точного расчета оставьте заявку.
+          <div
+            :id="`faq-answer-${index}`"
+            class="grid transition-all duration-300 ease-in-out"
+            :class="activeFaqIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+          >
+            <div class="overflow-hidden">
+              <p class="text-gray-600 leading-relaxed px-5 pb-5 sm:px-6 sm:pb-6">
+                {{ item.answer }}
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="mt-8 p-6 border border-blue-100 rounded-xl bg-white flex flex-col gap-5 shadow-sm items-start justify-between sm:flex-row sm:items-center">
+        <div>
+          <h3 class="text-xl text-gray-900 font-bold">
+            Не нашли ответ на свой вопрос?
+          </h3>
+          <p class="text-gray-600 leading-relaxed mt-2">
+            Оставьте заявку — мы бесплатно проконсультируем и поможем подобрать марку бетона под ваш объект.
           </p>
-        </details>
+        </div>
 
-        <!-- Item -->
-        <details class="group p-5 cursor-pointer">
-          <summary class="text-lg font-semibold list-none flex items-center justify-between">
-            Есть ли доставка бетона?
-
-            <span class="transition-transform duration-300 group-open:rotate-180">
-              ▼
-            </span>
-          </summary>
-
-          <p class="text-gray-600 leading-relaxed mt-3">
-            Да, компания TAUBETON осуществляет доставку бетона по Алматы и области собственным транспортом точно в срок.
-          </p>
-        </details>
-
-        <!-- Item -->
-        <details class="group p-5 cursor-pointer">
-          <summary class="text-lg font-semibold list-none flex items-center justify-between">
-            Соответствует ли бетон ГОСТ?
-
-            <span class="transition-transform duration-300 group-open:rotate-180">
-              ▼
-            </span>
-          </summary>
-
-          <p class="text-gray-600 leading-relaxed mt-3">
-            Да, весь бетон производится по ГОСТ и сопровождается паспортом качества.
-          </p>
-        </details>
+        <div class="flex flex-col gap-3 w-full sm:flex-row sm:w-auto">
+          <RequestModal button-text="Получить консультацию" />
+          <a
+            href="https://wa.me/77074852328"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-white font-semibold px-6 py-3 text-center rounded-lg bg-green-500 shadow-md transition-all hover:bg-green-600"
+          >
+            Написать в WhatsApp
+          </a>
+        </div>
       </div>
     </div>
   </section>

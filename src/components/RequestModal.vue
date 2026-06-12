@@ -4,6 +4,12 @@ import PhoneInput from '~/components/Inputs/PhoneInput.vue'
 import UsernameInput from '~/components/Inputs/UsernameInput.vue'
 import { useTelegram } from '~/composables/useTelegramApi'
 
+withDefaults(defineProps<{
+  buttonText?: string
+}>(), {
+  buttonText: 'Оставить заявку',
+})
+
 const { sendMessage } = useTelegram()
 
 const isOpen = ref(false)
@@ -48,7 +54,7 @@ function handleSend() {
     class="text-white px-6 py-3 rounded-lg bg-blue-600 shadow-md transition-500 hover:bg-yellow-500 hover:opacity-90"
     @click="openModal"
   >
-    Оставить заявку
+    {{ buttonText }}
   </button>
 
   <!-- Teleport для модалки -->
