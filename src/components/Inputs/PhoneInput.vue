@@ -21,7 +21,11 @@ onMounted(() => {
 <template>
   <div class="w-full relative">
     <!-- Иконка -->
-    <span class="peer-focus:text-accent text-xl text-gray-400 transition-colors duration-300 left-4 top-1/2 absolute -translate-y-1/2" aria-hidden="true">☎</span>
+    <span class="peer-focus:text-accent text-gray-400 transition-colors duration-300 left-4 top-1/2 absolute -translate-y-1/2" aria-hidden="true">
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none">
+        <path d="M6.6 10.8c1.6 3.1 3.5 5 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1 .3 2 .5 3.1.5.7 0 1.3.6 1.3 1.3v3.4c0 .7-.6 1.3-1.3 1.3C10.3 21.4 2.6 13.7 2.6 4.3 2.6 3.6 3.2 3 3.9 3h3.4c.7 0 1.3.6 1.3 1.3 0 1.1.2 2.1.5 3.1.1.4 0 .9-.3 1.2l-2.2 2.2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </span>
 
     <!-- Инпут -->
     <input

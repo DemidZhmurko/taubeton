@@ -11,34 +11,60 @@
       <!-- Контактная информация и описание -->
       <div class="mb-20 gap-10 grid items-start md:grid-cols-2">
         <!-- Левая колонка -->
-        <div class="text-xl space-y-8">
-          <div>
-            <p class="text-2xl font-semibold">
-              📞 Телефон:
-            </p>
-            <a href="tel:+77074852328" class="text-2xl text-blue-600 font-medium hover:underline">
-              +7 (707) 485-23-28
-            </a>
+        <div class="space-y-5">
+          <div class="p-5 border border-gray-200 rounded-xl bg-white flex gap-4 shadow-sm items-center">
+            <span class="text-blue-600 rounded-full bg-blue-100 flex h-12 min-w-12 items-center justify-center" aria-hidden="true">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none">
+                <path d="M6.6 10.8c1.6 3.1 3.5 5 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1 .3 2 .5 3.1.5.7 0 1.3.6 1.3 1.3v3.4c0 .7-.6 1.3-1.3 1.3C10.3 21.4 2.6 13.7 2.6 4.3 2.6 3.6 3.2 3 3.9 3h3.4c.7 0 1.3.6 1.3 1.3 0 1.1.2 2.1.5 3.1.1.4 0 .9-.3 1.2l-2.2 2.2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <div>
+              <p class="text-sm text-gray-500 font-medium">
+                Телефон
+              </p>
+              <a href="tel:+77074852328" class="text-xl text-blue-600 font-bold transition hover:text-blue-700">
+                +7 (707) 485-23-28
+              </a>
+            </div>
           </div>
-          <div>
-            <p class="text-2xl font-semibold">
-              💬 WhatsApp:
-            </p>
-            <a
-              href="https://wa.me/77074852328"
-              target="_blank"
-              class="text-2xl text-green-600 font-medium hover:underline"
-            >
-              Написать в WhatsApp
-            </a>
+
+          <div class="p-5 border border-gray-200 rounded-xl bg-white flex gap-4 shadow-sm items-center">
+            <span class="text-green-600 rounded-full bg-green-100 flex h-12 min-w-12 items-center justify-center" aria-hidden="true">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none">
+                <path d="M5.2 19.1 6 16.2A8 8 0 1 1 9 19l-3.8.1Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M9.4 8.8c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .5.4l.6 1.4c.1.3.1.5-.1.7l-.4.5c-.1.1-.2.3-.1.5.4.8 1.1 1.5 2 1.9.2.1.4 0 .5-.1l.5-.6c.2-.2.4-.2.7-.1l1.4.7c.4.2.4.4.4.6 0 .5-.3 1-.8 1.3-.5.3-1.5.4-3.2-.4-2.7-1.2-4.4-3.6-4.6-4.9-.2-.8.1-1.3.4-1.5Z" fill="currentColor" />
+              </svg>
+            </span>
+            <div>
+              <p class="text-sm text-gray-500 font-medium">
+                WhatsApp
+              </p>
+              <a
+                href="https://wa.me/77074852328"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xl text-green-600 font-bold transition hover:text-green-700"
+              >
+                Написать в WhatsApp
+              </a>
+            </div>
           </div>
-          <div>
-            <p class="text-2xl font-semibold">
-              📍 Адрес:
-            </p>
-            <p class="text-xl text-gray-800">
-              Ул. Казыбаева 262
-            </p>
+
+          <div class="p-5 border border-gray-200 rounded-xl bg-white flex gap-4 shadow-sm items-center">
+            <span class="text-yellow-600 rounded-full bg-yellow-100 flex h-12 min-w-12 items-center justify-center" aria-hidden="true">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none">
+                <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                <path d="M12 12.3a2.3 2.3 0 1 0 0-4.6 2.3 2.3 0 0 0 0 4.6Z" stroke="currentColor" stroke-width="1.8" />
+              </svg>
+            </span>
+            <div>
+              <p class="text-sm text-gray-500 font-medium">
+                Адрес
+              </p>
+              <p class="text-xl text-gray-800 font-bold">
+                Ул. Казыбаева 262
+              </p>
+            </div>
           </div>
         </div>
 

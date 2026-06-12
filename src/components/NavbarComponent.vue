@@ -55,7 +55,11 @@ onMounted(() => {
           <ul class="text-sm text-gray-700 flex justify-between space-x-4">
             <li>РК, г. Алматы, Улица Казыбаева, 262</li>
             <li class="flex items-center">
-              <span class="text-xs text-green-500 mr-2" aria-hidden="true">☎</span>
+              <span class="text-green-600 mr-2 rounded-full bg-green-100 flex h-6 w-6 items-center justify-center" aria-hidden="true">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none">
+                  <path d="M6.6 10.8c1.6 3.1 3.5 5 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1 .3 2 .5 3.1.5.7 0 1.3.6 1.3 1.3v3.4c0 .7-.6 1.3-1.3 1.3C10.3 21.4 2.6 13.7 2.6 4.3 2.6 3.6 3.2 3 3.9 3h3.4c.7 0 1.3.6 1.3 1.3 0 1.1.2 2.1.5 3.1.1.4 0 .9-.3 1.2l-2.2 2.2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
               <a href="tel:+77074852328" class="transition hover:underline">
                 +7 (707) 485-23-28
               </a>
@@ -77,21 +81,17 @@ onMounted(() => {
         </nav>
       </div>
 
-      <!-- Десктоп-кнопка -->
-      <!-- <div class="hidden md:block">
-        <a href="tel:+77074852328" class="text-gray-700 mt-2 flex items-center">
-          <span class="text-xs text-green-500 mr-2" aria-hidden="true">☎</span>
-          <span class="text-sm">+7 (707) 485-23-28 </span>
-        </a>
-      </div> -->
-
       <!-- Мобильный блок -->
       <div class="flex items-center space-x-4 md:hidden">
         <a
           href="tel:+7(707)485-23-28"
           class="text-gray-700 font-semibold flex transition items-center hover:text-blue-600"
         >
-          <span class="text-lg text-green-500 mr-1" aria-hidden="true">☎</span>
+          <span class="text-green-600 mr-2 rounded-full bg-green-100 flex h-7 w-7 items-center justify-center" aria-hidden="true">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none">
+              <path d="M6.6 10.8c1.6 3.1 3.5 5 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1 .3 2 .5 3.1.5.7 0 1.3.6 1.3 1.3v3.4c0 .7-.6 1.3-1.3 1.3C10.3 21.4 2.6 13.7 2.6 4.3 2.6 3.6 3.2 3 3.9 3h3.4c.7 0 1.3.6 1.3 1.3 0 1.1.2 2.1.5 3.1.1.4 0 .9-.3 1.2l-2.2 2.2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
           <span class="text-sm">Позвонить</span>
         </a>
 
