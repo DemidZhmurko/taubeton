@@ -10,7 +10,7 @@
         href="tel:+77074852328"
         aria-label="Позвонить"
       >
-        <div class="i-mdi:phone text-3xl text-white" />
+        <span class="text-3xl text-white leading-none" aria-hidden="true">☎</span>
       </a>
     </div>
   </div>

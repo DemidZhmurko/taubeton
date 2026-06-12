@@ -12,7 +12,7 @@ const message = 'Здравствуйте! Я хочу заказать Бето
 
         aria-label="Открыть чат в WhatsApp"
       >
-        <div class="i-mdi:whatsapp text-3xl text-white" />
+        <span class="text-lg text-white leading-none font-bold" aria-hidden="true">WA</span>
       </a>
     </div>
   </div>

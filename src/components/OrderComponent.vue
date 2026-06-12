@@ -48,7 +48,7 @@ function handleSend() {
     @click="openModal"
   >
     Заказать
-    <div class="i-mdi-arrow-right" />
+    <span aria-hidden="true">→</span>
   </button>
 
   <!-- Модалка -->

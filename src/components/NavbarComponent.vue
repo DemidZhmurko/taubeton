@@ -55,7 +55,7 @@ onMounted(() => {
           <ul class="text-sm text-gray-700 flex justify-between space-x-4">
             <li>РК, г. Алматы, Улица Казыбаева, 262</li>
             <li class="flex items-center">
-              <div class="i-mdi-phone text-xs text-green-500 mr-2" />
+              <span class="text-xs text-green-500 mr-2" aria-hidden="true">☎</span>
               <a href="tel:+77074852328" class="transition hover:underline">
                 +7 (707) 485-23-28
               </a>
@@ -80,7 +80,7 @@ onMounted(() => {
       <!-- Десктоп-кнопка -->
       <!-- <div class="hidden md:block">
         <a href="tel:+77074852328" class="text-gray-700 mt-2 flex items-center">
-          <div class="i-mdi-phone text-xs text-green-500 mr-2" />
+          <span class="text-xs text-green-500 mr-2" aria-hidden="true">☎</span>
           <span class="text-sm">+7 (707) 485-23-28 </span>
         </a>
       </div> -->
@@ -91,7 +91,7 @@ onMounted(() => {
           href="tel:+7(707)485-23-28"
           class="text-gray-700 font-semibold flex transition items-center hover:text-blue-600"
         >
-          <div class="i-mdi-phone text-lg text-green-500 mr-1" />
+          <span class="text-lg text-green-500 mr-1" aria-hidden="true">☎</span>
           <span class="text-sm">Позвонить</span>
         </a>
 
@@ -100,7 +100,7 @@ onMounted(() => {
           class="text-3xl text-gray-700 flex h-8 w-8 cursor-pointer transition-all duration-300 items-center justify-center"
           @click="toggleMobileMenu"
         >
-          <div :class="isMobileMenuOpen ? 'i-mdi-close' : 'i-mdi-menu'" />
+          <span aria-hidden="true">{{ isMobileMenuOpen ? '×' : '☰' }}</span>
         </div>
       </div>
     </div>
