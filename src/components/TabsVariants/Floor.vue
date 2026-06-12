@@ -15,42 +15,71 @@ const volume = computed(() => {
 </script>
 
 <template>
-  <div class="mx-auto px-4 py-10 max-w-7xl">
-    <div class="flex flex-col-reverse gap-8 items-center md:flex-row">
-      <!-- Левая колонка -->
-      <div class="w-full space-y-5 md:w-1/2">
-        <h2 class="text-xl text-gray-800 font-semibold">
-          Введите размеры плиты
-        </h2>
-        <div class="gap-4 grid">
-          <input
-            v-model.number="a"
-            placeholder="Длина плиты A (м)"
-            class="focus:ring-main p-3 border rounded-md shadow-sm transition-all focus:outline-none focus:ring-2"
-          >
-          <input
-            v-model.number="b"
-            placeholder="Ширина плиты B (м)"
-            class="focus:ring-main p-3 border rounded-md shadow-sm transition-all focus:outline-none focus:ring-2"
-          >
-          <input
-            v-model.number="c"
-            placeholder="Толщина плиты C (см)"
-            class="focus:ring-main p-3 border rounded-md shadow-sm transition-all focus:outline-none focus:ring-2"
-          >
+  <div class="py-6">
+    <div class="gap-6 grid lg:grid-cols-[1.1fr_0.9fr]">
+      <div class="p-1 rounded-xl bg-white">
+        <div class="mb-5">
+          <h3 class="text-2xl text-gray-900 font-bold">
+            Плита или стяжка
+          </h3>
+          <p class="text-sm text-gray-500 mt-2">
+            Введите длину, ширину и толщину слоя для расчёта объёма.
+          </p>
         </div>
-        <p class="text-lg text-gray-900 font-semibold">
-          Итого: <span class="text-main">{{ volume }} м³</span>
-        </p>
+
+        <div class="gap-4 grid sm:grid-cols-2">
+          <label class="block">
+            <span class="text-sm text-gray-700 font-medium">Длина A, м</span>
+            <input
+              v-model.number="a"
+              type="number"
+              step="0.01"
+              placeholder="Например: 6"
+              class="mt-2 p-4 border border-gray-200 rounded-lg bg-gray-50 w-full transition-all focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500"
+            >
+          </label>
+          <label class="block">
+            <span class="text-sm text-gray-700 font-medium">Ширина B, м</span>
+            <input
+              v-model.number="b"
+              type="number"
+              step="0.01"
+              placeholder="Например: 4"
+              class="mt-2 p-4 border border-gray-200 rounded-lg bg-gray-50 w-full transition-all focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500"
+            >
+          </label>
+          <label class="block sm:col-span-2">
+            <span class="text-sm text-gray-700 font-medium">Высота / толщина C, см</span>
+            <input
+              v-model.number="c"
+              type="number"
+              step="1"
+              placeholder="Например: 20"
+              class="mt-2 p-4 border border-gray-200 rounded-lg bg-gray-50 w-full transition-all focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500"
+            >
+          </label>
+        </div>
       </div>
 
-      <!-- Правая колонка -->
-      <div class="rounded-xl bg-gray-50 flex w-full items-center justify-center md:w-1/2">
-        <img
-          src="https://optim.tildacdn.pro/tild6165-3638-4132-b134-366231393632/-/resize/720x/-/format/webp/_.jpg.webp"
-          alt="Напольная плита"
-          class="h-full max-w-full object-cover"
-        >
+      <div class="p-5 rounded-xl bg-gray-50 flex flex-col gap-5">
+        <div class="p-3 rounded-lg bg-white flex min-h-56 shadow-sm items-center justify-center">
+          <img
+            src="https://optim.tildacdn.pro/tild6165-3638-4132-b134-366231393632/-/resize/720x/-/format/webp/_.jpg.webp"
+            alt="Напольная плита"
+            class="max-h-64 max-w-full object-contain"
+          >
+        </div>
+        <div class="text-white p-5 rounded-xl bg-blue-600 shadow-md">
+          <p class="text-sm text-blue-100">
+            Необходимый объём
+          </p>
+          <p class="text-4xl font-bold mt-2">
+            {{ volume }} м³
+          </p>
+          <p class="text-sm text-blue-50 leading-relaxed mt-3">
+            Рекомендуем добавить 5–10% запаса на потери и неровности основания.
+          </p>
+        </div>
       </div>
     </div>
   </div>

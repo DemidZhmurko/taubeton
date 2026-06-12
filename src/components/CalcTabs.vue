@@ -22,29 +22,32 @@ const components: Record<TabKey, Component> = {
 </script>
 
 <template>
-  <div class="mx-auto py-15 container">
-    <div class="py-10">
-      <h1 class="text-5xl text-gray-900 font-bold text-center">
-        Калькулятор для расчета бетона
-      </h1>
-      <p class="text-base text-gray-600 mt-2 text-center">
-        Рассчитайте необходимое количество бетона и закажите у нас со скидкой
-      </p>
-    </div>
+  <div class="py-16 bg-gray-50">
+    <div class="mx-auto px-4 container">
+      <div class="mx-auto mb-10 text-center max-w-3xl">
+        <span class="text-sm text-blue-600 tracking-wide font-semibold uppercase">Онлайн-расчёт</span>
+        <h2 class="text-3xl text-gray-900 font-bold mt-3 md:text-5xl">
+          Калькулятор бетона
+        </h2>
+        <p class="text-base text-gray-600 leading-relaxed mt-4 md:text-lg">
+          Рассчитайте примерный объём бетона для фундамента, плиты, стяжки или другой конструкции.
+        </p>
+        <p class="text-sm text-gray-500 leading-relaxed mt-3">
+          Онлайн-калькулятор помогает быстро рассчитать примерный объём бетона в кубометрах для строительных работ.
+        </p>
+      </div>
 
-    <div class="flex flex-col gap-6 justify-center md:flex-row">
-      <!-- Левая колонка: Табы + Компонент -->
-      <div class="mx-auto w-[80%] space-y-10">
+      <div class="mx-auto p-4 border border-gray-200 rounded-xl bg-white max-w-6xl shadow-lg md:p-6">
         <!-- Табы -->
-        <div class="flex flex-col gap-2 items-center justify-center md:flex-row">
+        <div class="p-2 rounded-xl bg-gray-100 flex flex-col gap-2 md:flex-row">
           <button
             v-for="tab in tabs"
             :key="tab"
-            class="px-4 py-2 rounded transition-all duration-300"
+            class="text-sm font-medium px-4 py-3 rounded-lg flex-1 transition-all duration-300"
             :class="[
               activeTab === tab
-                ? 'bg-blue-600 text-white shadow font-medium'
-                : 'text-gray-600 bg-transparent hover:bg-gray-600/10',
+                ? 'bg-blue-600 text-white shadow-md'
+                : 'text-gray-600 bg-transparent hover:bg-white hover:text-blue-600',
             ]"
             @click="activeTab = tab"
           >
@@ -56,7 +59,28 @@ const components: Record<TabKey, Component> = {
         <keep-alive>
           <component :is="components[activeTab]" />
         </keep-alive>
-        <RequestModal />
+
+        <div class="mt-6 p-5 border border-blue-100 rounded-xl bg-blue-50/70 flex flex-col gap-4 items-start justify-between md:flex-row md:items-center">
+          <div>
+            <h3 class="text-lg text-gray-900 font-bold">
+              Хотите точную стоимость с доставкой?
+            </h3>
+            <p class="text-sm text-gray-600 leading-relaxed mt-1">
+              Оставьте заявку — мы рассчитаем объём, марку бетона и стоимость доставки по Алматы.
+            </p>
+          </div>
+          <div class="flex flex-col gap-3 w-full sm:flex-row md:w-auto">
+            <RequestModal button-text="Получить точный расчёт" />
+            <a
+              href="https://wa.me/77074852328"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white font-semibold px-6 py-3 text-center rounded-lg bg-green-500 shadow-md transition-all hover:bg-green-600"
+            >
+              Написать в WhatsApp
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
