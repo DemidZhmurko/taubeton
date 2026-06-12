@@ -68,7 +68,7 @@ const products: ProductItem[] = [
 </script>
 
 <template>
-  <section id="assortment" class="py-16 bg-gray-100">
+  <section class="py-16 bg-gray-100">
     <div class="mx-auto px-4 container">
       <h2 class="text-3xl font-bold mb-4 text-center">
         Марки бетона с доставкой по Алматы

@@ -19,8 +19,7 @@ export function useTelegram() {
 
       return res.ok
     }
-    catch (e) {
-      console.error('Telegram error', e)
+    catch {
       return false
     }
   }

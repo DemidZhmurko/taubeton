@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section id="about" class="py-20 bg-gray-50 md:py-24">
+  <section class="py-20 bg-gray-50 md:py-24">
     <div class="mx-auto px-4 container">
       <div class="p-5 border border-gray-200 rounded-3xl bg-white shadow-[0_24px_70px_rgba(15,23,42,0.08)] lg:p-10 sm:p-8">
         <!-- Заголовок -->
@@ -12,7 +12,7 @@
             TAUBETON
           </span>
           <h2 class="text-3xl text-gray-950 leading-tight font-bold mt-4 md:text-5xl">
-            О компании и наши преимущества
+            О компании TAUBETON
           </h2>
           <div class="mx-auto mt-5 rounded-full bg-blue-600 h-1 w-20" aria-hidden="true" />
         </div>

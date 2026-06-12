@@ -66,7 +66,7 @@ function handleSend() {
         class="bg-black/40 flex items-center inset-0 justify-center fixed z-[9999] backdrop-blur-sm"
         role="dialog"
         aria-modal="true"
-        aria-labelledby="modal-title"
+        aria-labelledby="order-modal-title"
       >
         <div class="p-6 rounded-xl bg-white max-w-md w-full shadow-xl relative">
           <!-- Кнопка закрытия -->
@@ -79,7 +79,7 @@ function handleSend() {
           </button>
 
           <!-- Заголовок -->
-          <h2 id="modal-title" class="text-xl font-bold mb-4 text-center">
+          <h2 id="order-modal-title" class="text-xl font-bold mb-4 text-center">
             Оставьте заявку
           </h2>
 
@@ -91,7 +91,7 @@ function handleSend() {
 
           <!-- Кнопка отправки -->
           <button
-            class="text-white font-semibold mt-6 py-3 rounded-lg bg-red-600 w-full transition hover:bg-red-700"
+            class="text-white font-semibold mt-6 py-3 rounded-lg bg-blue-600 w-full transition hover:bg-blue-700"
             @click="handleSend"
           >
             Отправить заявку

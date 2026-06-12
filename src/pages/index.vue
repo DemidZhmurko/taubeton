@@ -64,6 +64,12 @@ const faqSchema = {
 
 // ✅ Head (GA + FAQ)
 useHead({
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://taubeton.kz/',
+    },
+  ],
   script: [
     {
       async: true,
@@ -93,28 +99,30 @@ useHead({
 
 // ✅ SEO Meta (под TAUBETON)
 useSeoMeta({
-  title: 'Купить бетон в Алматы с доставкой — TAUBETON',
-  description: 'Купить бетон в Алматы с доставкой от производителя TAUBETON. Все марки бетона по ГОСТ, выгодные цены и быстрая доставка.',
-  ogTitle: 'Бетон с доставкой в Алматы — TAUBETON',
-  ogDescription: 'Производство и доставка бетона по Алматы. Марки М200–М350, гарантия качества.',
+  title: 'Бетон в Алматы с доставкой | Купить товарный бетон — TAUBETON',
+  description: 'TAUBETON поставляет товарный бетон в Алматы и ближайшие районы. Марки М100–М400, доставка миксером, бетон для фундамента, плит, стяжек и монолитных работ.',
+  robots: 'index, follow',
+  ogType: 'website',
+  ogTitle: 'Бетон в Алматы с доставкой — TAUBETON',
+  ogDescription: 'Товарный бетон М100–М400 с доставкой по Алматы. Бетон для фундамента, плит, стяжек и монолитных работ.',
   ogUrl: 'https://taubeton.kz',
   ogSiteName: 'TAUBETON',
   twitterCard: 'summary',
-  twitterTitle: 'Купить бетон в Алматы — TAUBETON',
-  twitterDescription: 'Бетон с доставкой по Алматы по выгодной цене.',
+  twitterTitle: 'Бетон в Алматы с доставкой — TAUBETON',
+  twitterDescription: 'Купить товарный бетон М100–М400 с доставкой миксером по Алматы и ближайшим районам.',
 })
 
 // ✅ Schema.org
 useSchemaOrg([
   defineWebPage({
-    name: 'Купить бетон в Алматы | TAUBETON',
-    description: 'Купить бетон в Алматы с доставкой от производителя TAUBETON. Продажа бетона всех марок.',
+    name: 'Бетон в Алматы с доставкой | TAUBETON',
+    description: 'Купить товарный бетон в Алматы с доставкой миксером. Марки М100, М150, М200, М250, М300, М350 и М400 для фундамента, плит и стяжек.',
   }),
 
   defineWebSite({
     name: 'TAUBETON',
     url: 'https://taubeton.kz',
-    description: 'Производство и доставка бетона по Алматы и Казахстану.',
+    description: 'Товарный бетон в Алматы с доставкой для частных и коммерческих строительных объектов.',
   }),
 
   defineLocalBusiness({
@@ -122,9 +130,9 @@ useSchemaOrg([
     url: 'https://taubeton.kz',
     image: 'https://taubeton.kz/logo.png',
     telephone: '+77074852328',
-    description: 'Производство и доставка бетона по Алматы. Все марки бетона с гарантией качества.',
+    description: 'Поставка товарного бетона М100–М400 с доставкой по Алматы и ближайшим районам.',
     address: {
-      streetAddress: 'Алматы',
+      streetAddress: 'Ул. Казыбаева 262',
       addressLocality: 'Алматы',
       addressCountry: 'KZ',
     },
@@ -144,7 +152,7 @@ useSchemaOrg([
       <div class="md:items-left text-white py-12 flex flex-col min-h-[70vh] items-start justify-center md:text-left md:w1/2">
         <div class="text-center w-full space-y-6 md:text-left">
           <h1 class="text-2xl leading-tight font-bold md:text-6xl sm:text-5xl">
-            Купить бетон с доставкой в Алматы по самым выгодным ценам
+            Бетон в Алматы с доставкой
           </h1>
           <p class="text-base sm:text-lg">
             Компания «TAUBETON» занимается производством и доставкой бетона и строительных растворов по всей территории Казахстана, гарантируя высокое качество продукции и соблюдение сроков
@@ -182,7 +190,7 @@ useSchemaOrg([
       <div class="mb-10 text-center">
         <span class="text-sm text-blue-600 tracking-wide font-semibold uppercase">FAQ</span>
         <h2 class="text-2xl text-gray-900 font-bold mt-3 md:text-4xl">
-          Часто задаваемые вопросы о бетоне и доставке в Алматы
+          Часто задаваемые вопросы о бетоне
         </h2>
         <p class="text-gray-600 leading-relaxed mx-auto mt-4 max-w-2xl">
           Собрали ответы про бетон Алматы, доставку, цену бетона за куб и подбор марки под фундамент или монолитные работы.

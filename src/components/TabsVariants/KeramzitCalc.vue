@@ -17,9 +17,9 @@ const volume = computed(() => {
 <template>
   <div class="mx-auto py-15 container">
     <div class="py-10">
-      <h1 class="text-5xl text-gray-900 font-bold text-center">
+      <h2 class="text-5xl text-gray-900 font-bold text-center">
         Калькулятор для расчета Керамзита
-      </h1>
+      </h2>
       <p class="text-base text-gray-600 mt-2 text-center">
         Рассчитайте необходимое количество керамзита и закажите у нас со скидкой
       </p>

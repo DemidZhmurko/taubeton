@@ -28,7 +28,7 @@ const pumps = [
 </script>
 
 <template>
-  <section id="pumps" class="py-20 bg-white">
+  <section class="py-20 bg-white">
     <div class="mx-auto px-4 container">
       <h2 class="text-3xl font-bold mb-4 text-center">
         Услуги автобетононасосов

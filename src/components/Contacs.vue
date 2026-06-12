@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <section id="contacts" class="pt-20 bg-gray-50">
+  <section class="pt-20 bg-gray-50">
     <div class="mx-auto px-4 container">
       <div class="rounded-3xl bg-white ring-1 ring-gray-200 shadow-[0_24px_80px_rgba(15,23,42,0.10)] overflow-hidden">
         <div class="grid lg:grid-cols-[0.95fr_1.05fr]">
@@ -12,7 +12,7 @@
             </span>
 
             <h2 class="text-3xl leading-tight font-bold mt-6 md:text-5xl">
-              Свяжитесь с нами для заказа бетона с доставкой по Алматы
+              Контакты TAUBETON
             </h2>
 
             <p class="text-base text-gray-200 leading-relaxed mt-5 max-w-xl md:text-lg">
@@ -164,7 +164,7 @@
         </div>
         <div class="text-center space-x-4 sm:text-right">
           <a href="#about" class="hover:text-yellow-600">О нас</a>
-          <a href="#assoritment" class="hover:text-yellow-600">Ассортимент</a>
+          <a href="#assortiment" class="hover:text-yellow-600">Ассортимент</a>
           <a href="#contacts" class="hover:text-yellow-600">Контакты</a>
         </div>
       </div>
